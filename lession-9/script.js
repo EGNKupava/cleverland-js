@@ -13,11 +13,11 @@ const dogBarbos = new Dog("BARBOS");
 let dogBobik = {
   name: "BOBIK",
   color: "grey",
-  bark: function () {
+  bark() {
     alert(`${this.name} сказал  Привет`);
   },
 };
-
+console.log("dogBobik: ", dogBobik);
 function Cat(name) {
   this.name = name;
   this.color = "white";
