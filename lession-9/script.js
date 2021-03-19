@@ -35,4 +35,3 @@ let catBarsik = {
 dogBarbos.bark.call(catKesha); //Вызов от имени catBarsik
 dog.bark.call(dogBobik); //Вызов от имени catBarsik
 dog.bark.call(catBarsik); //Вызов от имени catBarsik
-dog.bark.call(catBarsik); //Вызов от имени catBarsik
