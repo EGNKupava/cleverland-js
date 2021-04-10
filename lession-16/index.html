@@ -8,23 +8,37 @@
   <title>Document</title>
   <script defer src="script.js"></script>
   <style>
-    .menu-button {
-      cursor: pointer;
+    .container {
+      text-align: center;
     }
 
-    .burger-benu {
-      display: none;
+    .ball {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #ff0000;
+      top: 50%;
+      right: 50%;
+      transition: all 1s;
     }
 
-    .active {
-      display: block;
+    .clock {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: #ee5502;
+      font-size: 60px;
+      font-family: Orbitron;
+      letter-spacing: 7px;
     }
   </style>
 </head>
 
 <body>
   <h1>Cleverland</h1>
-  <h2>DOM дерево</h2>
+  <h2>Планирование setTimeout и setInterval</h2>
   <button type="button" id="1">1</button>
   <button type="button" id="2">2</button>
   <button type="button" id="3">3</button>
@@ -32,10 +46,16 @@
   <button type="button" id="5">5</button>
   <button type="button" id="6">6</button>
   <button type="button" id="7">7</button>
+  <button type="button" id="8">8</button>
+  <button type="button" id="9">9</button>
+  <button type="button" id="10">10</button>
+  <button type="button" id="clock">Clock</button>
   <div id='container' class="container">
-    <p>Првый абзац</p>
-    <p id="second-paragraph">Второй абзац</p>
+    <input type="text" id="input">
+    <h2 id="title">TITLE</h2>
   </div>
+  <div class="ball" id="ball"></div>
+  <div id="MyClockDisplay" class="clock"></div>
 </body>
 
 </html>
