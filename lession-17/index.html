@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="script.js"></script>
+  <style>
+    .container {
+      margin: 0 auto;
+      padding: 20px;
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    .child-container {
+      margin: 0 auto;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    .cube {
+      width: 100px;
+      height: 100px;
+      background: rgb(180, 45, 45);
+      margin-bottom: 10px;
+    }
+
+    .green {
+      background: rgb(0, 253, 84);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Cleverland</h1>
+  <h2>События, обработчики событий</h2>
+  <div class="cube" onclick="alert('Клик по кубику')"></div>
+  <div class="cube green" onclick="clickCouner()"></div>
+  <button type="button" id="1">1</button>
+  <button type="button" id="2">Два</button>
+  <button type="button" id="3">3</button>
+  <button type="button" id="4">4</button>
+  <button type="button" id="5">5</button>
+  <button type="button" id="6">6</button>
+  <button type="button" id="7">7</button>
+  <button type="button" id="8">8</button>
+  <button type="button" id="9">9</button>
+  <button type="button" id="10">10</button>
+  <!-- <div id='container' class="container">
+    <p>Контейнер</p>
+    <div class='child-container' id="child-container">
+      <button id="button" type="button">Click me!!!</button>
+    </div>
+  </div> -->
+  <!-- <div id='my-container' class="container">
+    <p>Контейнер</p>
+    <div class='child-container' id="child-container">
+      <button id="button" type="button">Click me!!!</button>
+    </div>
+  </div> -->
+</body>
+<script>
+  let x = 0;
+
+  function clickCouner() {
+    x++;
+    alert(`Вы кликнули по кубику ${x} раз!!!`);
+  }
+</script>
+
+</html>
