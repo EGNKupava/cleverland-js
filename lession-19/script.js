@@ -70,3 +70,64 @@ class Rabbit extends Predator {
 
 const myRabbit = new Rabbit("Годзилла", 500);
 myRabbit.run(5);
+
+// Мы также можем присвоить метод самой функции-классу, а не её "prototype". Такие методы называются статическими.
+
+class Car {
+  constructor(name, label, engine) {
+    this.name = name;
+    this.label = label;
+    this.engine = engine;
+  }
+
+  static staticMethod() {
+    alert(this === Car); // true
+  }
+}
+
+//Это фактически то же самое, что присвоить метод напрямую как свойство функции:
+
+Car.staticMove = function () {
+  alert(this === Car);
+};
+
+// Статические свойства
+
+class Article {
+  static publisher = "Илья Кантор";
+}
+
+alert(Article.publisher); // Илья Кантор
+
+// Наследование статических свойств и методов
+// Статические свойства и методы наследуются.
+//Например, метод Animal.compare в коде ниже наследуется и доступен как Rabbit.compare:
+
+class MyAnimal {
+  constructor(name, speed) {
+    this.speed = speed;
+    this.name = name;
+  }
+
+  run(speed = 0) {
+    this.speed += speed;
+    alert(`${this.name} бежит со скоростью ${this.speed}.`);
+  }
+
+  static compare(animalA, animalB) {
+    return animalA.speed - animalB.speed;
+  }
+}
+
+// Наследует от MyAnimal
+class Hedgehog extends MyAnimal {
+  hide() {
+    alert(`${this.name} прячется!`);
+  }
+}
+
+let rabbits = [new Hedgehog("Белый ежик", 15), new Hedgehog("Чёрный ежик", 5)];
+
+rabbits.sort(Rabbit.compare);
+
+rabbits[0].run(); // Белый ежик бежит со скоростью 5.
