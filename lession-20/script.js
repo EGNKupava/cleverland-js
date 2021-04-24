@@ -29,7 +29,7 @@ async function getWeather() {
   }
 }
 
-getWeather();
+// getWeather();
 
 // Response предоставляет несколько методов, основанных на промисах, для доступа к телу ответа в различных форматах:
 
@@ -65,3 +65,12 @@ formElem.onsubmit = async (e) => {
   let json = JSON.stringify(object);
   postUserData(json);
 };
+
+function fetchData() {
+  fetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+}
+
+// fetchData();
