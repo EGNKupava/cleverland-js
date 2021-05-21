@@ -21,8 +21,8 @@ const inc = (() => {
   return () => ++counter;
 })();
 
-console.log("inc();: ", inc()); // 1
-console.log("inc();: ", inc()); // 2
+// console.log("inc();: ", inc()); // 1
+// console.log("inc();: ", inc()); // 2
 
 let words = [
   "banana",
@@ -64,3 +64,14 @@ const calc = (n) => (arg1) => (arg2) => n(arg1, arg2);
 
 // console.log("calc(sum)(3)(2);: ", calc(summ)(3)(2));
 // console.log("calc(sum)(3)(2);: ", calc(mult)(3)(2));
+
+const cat = {
+  catName: "Vasya",
+  sayName() {
+    setTimeout(() => {
+      console.log(this.catName);
+    });
+  },
+};
+
+cat.sayName();
