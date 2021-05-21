@@ -9,11 +9,23 @@ let cleverland = "Cleverland";
 // console.log(cleverland);
 // __________________________________________________
 
-// unicue sort arr
-let arr = [1, 4, 3, 2, 1, 4]; // Нужно [1, 2, 3, 4]
+// let myArr = [];
 
-// let newArr = ;
-// console.log("newArr: ", newArr);
+// if (myArr) {
+//   console.log("Привет");
+// } else {
+//   console.log("Пока");
+// }
+
+// __________________________________________________
+
+// let myObj = {};
+
+// if (myObj) {
+//   console.log("Привет");
+// } else {
+//   console.log("Пока");
+// }
 
 // __________________________________________________
 
@@ -24,3 +36,9 @@ let arr = [1, 4, 3, 2, 1, 4]; // Нужно [1, 2, 3, 4]
 // }
 
 //_________________________________________________
+
+// unicue sort arr
+let arr = [1, 4, 3, 2, 1, 4]; // Нужно [1, 2, 3, 4]
+
+// let newArr = ;
+// console.log("newArr: ", newArr);
