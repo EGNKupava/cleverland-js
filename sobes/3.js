@@ -42,3 +42,17 @@ let arr = [1, 4, 3, 2, 1, 4]; // Нужно [1, 2, 3, 4]
 
 // let newArr = ;
 // console.log("newArr: ", newArr);
+
+// const func1 = () => {
+//   let counter = 0;
+//   return () => {
+//     ++counter;
+//     console.log(counter);
+//   };
+// };
+
+// const showFoo = func1();
+
+// showFoo();
+// showFoo();
+// showFoo();
