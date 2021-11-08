@@ -7,7 +7,7 @@ function foo() {
   }
 }
 //--------------------------------------
-// foo();
+foo();
 
 // console.log(c);
 // var c = 7;
@@ -38,14 +38,15 @@ let newArr = (words) => {
     acc[item] = (acc[item] || 0) + 1;
     return acc;
   }, {});
+  console.log("accObj: ", accObj);
   const sortedArr = Object.entries(accObj).sort((a, b) => b[1] - a[1]);
   return sortedArr.map(([fruit]) => fruit);
 };
 
 //--------------------
+console.log("newArr(words): ", newArr(words));
 // Еще решение
 
-// console.log("newArr(words): ", newArr(words));
 let acc = 0;
 const sum = (num) => {
   acc = acc + num;
