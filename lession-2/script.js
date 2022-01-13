@@ -26,9 +26,14 @@ console.log(typeof {}); // object
 
 window.alert("Модальное окно!");
 
-let result = prompt("ВВЕДИТЕ ЗНАЧЕНИЕ", 42); //42 default значение;
+let result = prompt("ВВЕДИТЕ ЗНАЧЕНИЕ", "42"); //42 default значение;
 
-console.log("Введенное значение:", result);
+let res = +result;
+let str = `${res}`;
+
+console.log("Введенное значение:", res);
+console.log("Тип значения:", typeof res);
+console.log("str: ", typeof str);
 
 let isDelete = window.confirm("Точно хотите удалить?");
 

@@ -49,3 +49,7 @@ let a = ++myVal;
 let b = myVal1++;
 console.log("a: ", a);
 console.log("b: ", b);
+
+let y = "3";
+let x = 2;
+x += 2;

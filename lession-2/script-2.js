@@ -14,6 +14,19 @@ let num = Number(myString); // становится числом 123
 
 console.log("тип num", typeof num);
 
-let stringToNumber = +myString; // оператор + унарный
+let stringToNumber = myString; // оператор + унарный
 
 console.log("тип stringToNumber", typeof stringToNumber);
+
+let bool = true;
+
+let bool2 = !bool;
+
+let admin;
+let userName = "Джон";
+
+admin = userName;
+
+userName = "Vsya";
+
+alert(admin);
