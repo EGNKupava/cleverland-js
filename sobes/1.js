@@ -56,22 +56,22 @@ const sum = (num) => {
   };
 };
 
-// console.log("sum: ", sum(1)(2)(5)(4)());
+console.log("sum: ", sum(1)(2)(5)(4)());
 
 const summ = (a, b) => a + b;
 const mult = (a, b) => a * b;
 
 const calc = (n) => (arg1) => (arg2) => n(arg1, arg2);
 
-// console.log("calc(sum)(3)(2);: ", calc(summ)(3)(2));
-// console.log("calc(sum)(3)(2);: ", calc(mult)(3)(2));
+console.log("calc(sum)(3)(2);: ", calc(summ)(3)(2));
+console.log("calc(sum)(3)(2);: ", calc(mult)(3)(2));
 
 const cat = {
   catName: "Vasya",
   sayName() {
     setTimeout(() => {
       console.log(this.catName);
-    });
+    }, 1000);
   },
 };
 
