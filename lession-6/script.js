@@ -12,7 +12,7 @@ function addNumber(a, b = 3) {
 }
 
 const mySum1 = addNumber(1);
-console.log("mySum1: ", mySum1);
+// console.log("mySum1: ", mySum1);
 
 const sumNumber = (a, b = 5) => a + b;
 
@@ -27,8 +27,48 @@ function sayHi(age) {
   return c;
 }
 
-let userAge = prompt("your age");
+// let userAge = prompt("your age");
 
-sayHi(userAge);
+// sayHi(userAge);
 
 const getMin = (a, b, c) => Math.min(a, b, c);
+
+const factorial = (a) => {
+  if (a >= 1) {
+    let acc = 1;
+    for(let i = 1; i <= a; i++) {
+      acc = i * acc;
+    }
+    return acc;
+  }
+}
+
+const factorial2 = factorial;
+
+const callFoo = () => {
+  const name = 'Vasya';
+  return name;
+}
+
+const name2 = callFoo();
+
+console.log('name: ', name);
+
+let userNum = Number(prompt("put a numer", ""));
+
+function returnNum() {
+  if (userNum >= 10){
+    return userNum * userNum;
+  }
+
+  if(userNum < 7){
+    alert("small numer");
+    return userNum;
+    } else {
+    return userNum;
+}
+
+}
+
+const answer = returnNum();
+alert(answer);
