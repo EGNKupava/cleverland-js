@@ -14,7 +14,7 @@ const dog = {
   name: "Bobik",
 };
 
-// setTimeout(cat.sayMay.bind(dog), 1);
+setTimeout(cat.sayMay.bind(dog), 1);
 
 function sum(a, b) {
   return a + b;
@@ -36,3 +36,16 @@ class Cat {
 }
 const cat1 = new Cat("Cesha");
 console.log("cat: ", cat1);
+
+// Создать функцию bind()
+function bind(context, fn) {
+  return function (...args) {
+    fn.apply(context, args);
+  };
+}
+
+function logPerson() {
+  console.log(this.name, this.age);
+}
+const person = { name: "Alex", age: 34 };
+bind(person, logPerson)();
