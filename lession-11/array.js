@@ -20,6 +20,7 @@ button6.addEventListener("click", arrToString);
 //--------------------------------------------------
 
 const cards = new Array();
+
 const users = ["Алексей", "Иван", "Николай", "Григорий"];
 console.log("users: ", users);
 console.log("users.length: ", users.length); // Длина массива
@@ -48,7 +49,7 @@ const usersData = [
 
 // Методы массивов
 function addItem() {
-  users.push("Андрей");
+  users.push("Андрей", "BObik");
   console.log("users: ", users);
 }
 
@@ -86,7 +87,7 @@ function iterateArr() {
 // Многомерные массивы
 let matrix = [
   [1, 2, 3],
-  [4, 5, 6],
+  [4, 5, 6], // 1 1
   [7, 8, 9],
 ];
 
@@ -101,5 +102,6 @@ function arrToString() {
 }
 
 //Копирование спред оператором
-const users2 = [...users, "BOB"];
-// console.log("users2: ", users2);
+const users2 = [...users, "dfdfd", "dfdf"];
+// const users2 = users;
+console.log("users2: ", users2);

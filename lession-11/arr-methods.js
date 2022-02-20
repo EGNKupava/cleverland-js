@@ -20,15 +20,15 @@ const animals = ["Кот", "Черепаха", "Собакен", "Попугай
 function spliceArr() {
   //arr.splice(index[, deleteCount, elem1, ..., elemN])
   console.log("animals: ", animals);
-  animals.splice(1, 1);
-  // animals.splice(1, 1, "Жираф", "Крокодил");
+  // animals.splice(1, 1);
+  animals.splice(1, 1, "Жираф", "Крокодил");
   console.log("animals: ", animals);
 }
 //Метод splice также может вставлять элементы без удаления, для этого достаточно установить deleteCount в 0:
 
 function sliceArr() {
   console.log("animals: ", animals);
-  const newAnimals = animals.slice(2, 4);
+  const newAnimals = animals.slice(1, 3);
   console.log("newAnimals: ", newAnimals);
 }
 
@@ -60,11 +60,11 @@ function searchArr() {
   alert(arr.includes(1)); // true
 }
 
-//find и findIndex
-// const res = arr.find(function (item, index, array) {
-// если true - возвращается текущий элемент и перебор прерывается
-// если все итерации оказались ложными, возвращается undefined
-// });
+// find и findIndex
+const res = arr.find(function (item, index, array) {
+  // если true - возвращается текущий элемент и перебор прерывается
+  // если все итерации оказались ложными, возвращается undefined
+});
 
 // filter
 // const resul = arr.filter(function (item, index, array) {
@@ -73,9 +73,10 @@ function searchArr() {
 // });
 
 //map
-// const result = arr.map(function (item, index, array) {
-// возвращается новое значение вместо элемента
-// });
+const result = ["user", "user", "apple"].map(function (item, index, array) {
+  return item + "ggggg";
+});
+console.log("result: ", result);
 
 function compareNumeric(a, b) {
   if (a > b) return 1;
@@ -83,12 +84,8 @@ function compareNumeric(a, b) {
   if (a < b) return -1;
 }
 
-// let arr = [1, 2, 15];
-// arr.sort((a, b) => {
-//   if (a > b) return 1;
-//   if (a == b) return 0;
-//   if (a < b) return -1;
-// });
+let arr = [1, 2, 15];
+arr.sort((a, b) => a - b);
 
 //reverse
 // Метод arr.reverse меняет порядок элементов в arr на обратный.
@@ -106,5 +103,6 @@ function reduceArr() {
   }, initial);
   console.log("result: ", result);
 }
+reduceArr();
 
 // Array.isArray

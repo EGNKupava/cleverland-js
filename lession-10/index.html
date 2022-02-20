@@ -7,11 +7,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- <script src="string.js"></script> -->
-  <script src="number.js"></script>
+  <!-- <script src="number.js"></script> -->
+  <script src="game.js"></script>
 </head>
 
 <body>
-
+  <form>
+    <label>
+      вес
+      <input name="weight" type="number" id="weight">
+    </label>
+    Пол
+    <select name="sex" id="sex">
+      <option value="M">М</option>
+      <option value="W">Ж</option>
+    </select>
+  </form>
+  <button type="button" id="button"> Рассчитать</button>
+  <div id="result">result</div>
 </body>
+<script>
+  const btnEl = document.getElementById('button');
+  const weightEl = document.getElementById('weight');
+  const sexEl = document.getElementById('sex');
+  const resultEl = document.getElementById('result');
+
+  btnEl.addEventListener('click', () => {
+    console.log('weightEl.value: ', weightEl.value);
+    console.log('sexEl.value: ', sexEl.value);
+
+    resultEl.innerText = sexEl.value + weightEl.value;
+
+
+
+
+
+
+
+  })
+
+</script>
 
 </html>

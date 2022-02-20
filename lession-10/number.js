@@ -7,11 +7,18 @@ console.log("billion: ", billion);
 // очень маленькое число
 
 let ms = 1e-6;
+
 console.log("ms: ", ms);
 
 // Шестнадцатеричные, двоичные и восьмеричные числа
 
-const num = 923;
+01
+
+0 1 10 11 100 101 110
+const num1 = "110";
+console.log("Number.parseInt(num, 16): ", Number.parseInt(num1, 2));
+
+const num = 255;
 
 console.log("num.toString(16): ", num.toString(16));
 console.log("num.toString(2): ", num.toString(2));
@@ -41,7 +48,9 @@ Math.round;
 
 const numm = 13.123150497320847;
 // Метод toFixed(n) округляет число до n знаков после запятой и возвращает строковое представление результата.
-console.log("toFixed(n)", +numm.toFixed(4));
+console.log("toFixed(n)", Number(numm.toFixed(4)));
+
+const toFixed = (num) => Math.round(num * 10000) / 10000;
 
 // Неточные вычисления
 console.log("0.1 + 0.2 == 0.3: ", 0.1 + 0.2 == 0.3);
@@ -67,7 +76,7 @@ console.log(isFinite(num));
 
 // /parseInt и parseFloat
 
-console.log(parseInt("100px")); // 100
+console.log(parseInt("10030ddd")); // 10030
 console.log(parseFloat("12.5em")); // 12.5
 
 // Второй аргумент parseInt(str, radix)
@@ -83,5 +92,13 @@ console.log(parseFloat("12.5em")); // 12.5
 // Возвращает наибольшее/наименьшее число из перечисленных аргументов.
 
 // alert( Math.max(3, 5, -10, 0, 1) ); // 5
-// alert( Math.min(1, 2) ); // 1
+// alert( Math.min(1, 2,) ); // 1
 // Math.pow(n, power)
+
+const foo = (value) => {
+  const number = Number.parseFloat(value);
+  const currency = value.slice(number.toString().length);
+  return `${number * 2}${currency}`;
+};
+
+console.log('foo("10000000 баксов");: ', foo("10000000 баксов"));

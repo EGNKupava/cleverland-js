@@ -11,15 +11,14 @@ const cats2 = `Барсик
  Кузя
  Матроскин`; //Многострочная строка с помощью обратных кавычек
 
-console.log("cats: ", cats);
-console.log("cats2: ", cats2);
+console.log("кол-во слов", dog3.split(" ").length);
 
 // спецсимволы вставляются экранированием \u{1F60D}
 
 //Доступ к символам
 
 const myString = "Привет";
-
+myString[1] = "fff";
 console.log("myString: ", myString[1]); //: myString.charAt(1) - то же самое
 
 // Разница только в том, что если символ с такой позицией отсутствует, тогда [] вернёт undefined, а charAt — пустую строку:
@@ -67,7 +66,7 @@ while (true) {
 // Он используется тогда, когда нужно получить самое последнее вхождение: перед концом строки или начинающееся до (включительно) определённой позиции.
 // При проверке indexOf в условии if есть небольшое неудобство. Такое условие не будет работать:
 
-let str1 = "Widget with id";
+let str1 = "Widget with id         ";
 
 if (str1.indexOf("Widget")) {
   console.log("Совпадение есть"); // не работает
@@ -81,8 +80,8 @@ if (str1.indexOf("Widget") != -1) {
 
 // includes, startsWith, endsWith
 // Более современный метод str.includes(substr, pos) возвращает true, если в строке str есть подстрока substr, либо false, если нет.
-
-console.log("str.slice(6 , 5)", str1.slice(6, 11)); // без аргумента возвращает до каонца
+let str10 = "Widget with id";
+console.log("str10.slice(6 , 5)", str10.slice(6, 11)); // без аргумента возвращает до каонца
 
 // Также для start/end можно задавать отрицательные значения. Это означает, что позиция определена как заданное количество символов с конца строки:
 
@@ -120,3 +119,35 @@ console.log("str.slice(6 , 5)", str1.slice(6, 11)); // без аргумента
 // str.repeat(n) — повторяет строку n раз.
 // …и другие, которые вы можете найти в справочнике.
 // Также есть методы для поиска и замены с использованием регулярных выражений. Но это отдельная большая тема, поэтому ей посвящена отдельная глава учебника Регулярные выражения.
+
+const mail = "ivanpetrov@mail.ru";
+
+const index = mail.indexOf("@");
+
+const output = mail.slice(index + 1);
+console.log("output: ", output);
+
+const pal = "летhrл";
+const checkPalindrom = (str) => {
+  let answer;
+
+  for (let i = 0; i <= str.length / 2; i++) {
+    let revertIndex = str.length - 1 - i;
+    if (str[i] === str[revertIndex]) {
+      answer = true;
+    } else {
+      answer = false;
+      break;
+    }
+  }
+
+  return answer;
+};
+
+console.log(checkPalindrom(pal));
+
+const checkPalindrom2 = (str) => {
+  const revertStr = str.split("").revert().join("");
+  return str === revertStr;
+};
+console.log(checkPalindrom(pal));
